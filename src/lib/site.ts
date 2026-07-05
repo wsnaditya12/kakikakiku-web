@@ -121,6 +121,10 @@ export type Promo = {
   title: string;
   description: string;
   until: string;
+  /* Gambar poster promo (rasio 4:5). File ada di folder public/promos/.
+     Poster dibuat tim media tiap bulan; teks di bawah tetap ditulis manual
+     supaya terbaca Google (SEO) & pembaca layar. [KONFIRMASI OWNER] rasio 4:5 */
+  image: string;
 };
 
 // [KONFIRMASI OWNER] — semua promo di bawah ini dummy
@@ -131,6 +135,7 @@ export const promos: Promo[] = [
     description:
       "Setiap kunjungan servis apa pun, dapatkan diagnosa kaki-kaki lengkap tanpa biaya.",
     until: "Tanpa batas waktu",
+    image: "/promos/promo-1.jpg",
   },
   {
     badge: "-20%",
@@ -138,6 +143,7 @@ export const promos: Promo[] = [
     description:
       "Hemat 20% untuk pengerjaan spooring dan balancing sekaligus dalam satu kunjungan.",
     until: "s.d. 31 Juli 2026",
+    image: "/promos/promo-2.jpg",
   },
   {
     badge: "BONUS",
@@ -145,6 +151,7 @@ export const promos: Promo[] = [
     description:
       "Gratis balancing 2 roda untuk setiap penggantian sepasang shockbreaker.",
     until: "s.d. 31 Juli 2026",
+    image: "/promos/promo-3.jpg",
   },
 ];
 
