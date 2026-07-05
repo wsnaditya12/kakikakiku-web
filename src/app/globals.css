@@ -11,8 +11,8 @@
    Ganti nilai hex di sini → seluruh situs ikut berubah.
    ===================================================== */
 @theme inline {
-  --color-brand: #facc15;         /* kuning utama (tombol, aksen)   */
-  --color-brand-dark: #ca8a04;    /* kuning tua (efek hover)        */
+  --color-brand: #e8b830;         /* kuning emas — disamakan dengan warna logo */
+  --color-brand-dark: #c79a1d;    /* kuning tua (efek hover)        */
   --color-surface: #0f1115;       /* abu sangat gelap (background)  */
   --color-surface-light: #1a1d24; /* abu gelap (kartu / section)    */
   --color-line: #2a2e37;          /* garis pemisah halus            */

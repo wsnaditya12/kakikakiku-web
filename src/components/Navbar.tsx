@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site, waLink } from "@/lib/site";
 
 /* Menu dibuat sebagai data (array) → menambah menu = menambah 1 baris,
@@ -15,8 +16,19 @@ export default function Navbar() {
        backdrop-blur + bg transparan = efek kaca modern. */
     <header className="sticky top-0 z-50 border-b border-line bg-surface/85 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <a href="#" className="text-lg font-extrabold tracking-tight">
-          KAKIKAKI<span className="text-brand">KU</span>
+        {/* next/image: komponen gambar Next.js — otomatis lazy-load &
+            anti layout-shift. `priority` = logo dimuat paling awal.
+            Logo SVG hasil trace dari PNG — tajam di semua ukuran layar.
+            Catatan: warna kuning ditanam di file SVG-nya, karena SVG yang
+            dimuat via <img> tidak bisa mewarisi warna CSS halaman. */}
+        <a href="#" aria-label={site.name}>
+          <Image
+            src="/logo.svg"
+            alt={`Logo ${site.name}`}
+            width={165}
+            height={30}
+            priority
+          />
         </a>
 
         {/* hidden md:flex = disembunyikan di HP, muncul di layar ≥768px.

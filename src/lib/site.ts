@@ -33,48 +33,78 @@ export const site = {
 /* `type` di TypeScript = kontrak bentuk data.
    Kalau ada layanan yang lupa diberi `title`, error langsung
    muncul saat menulis kode — bukan saat web sudah tayang. */
+/* Pola "Gejala → Solusi" (diadopsi dari pembanding terbaik):
+   pengunjung mengenali MASALAHNYA dulu, baru ditawari solusinya.
+   Lebih menjual daripada sekadar deskripsi layanan. */
 export type Service = {
   icon: "steering" | "wheel" | "spring" | "joint" | "brake" | "shield";
   title: string;
-  description: string;
+  gejala: string[]; // keluhan yang dirasakan pengendara
+  solusi: string; // apa yang bengkel lakukan
 };
 
 export const services: Service[] = [
   {
     icon: "steering",
     title: "Spooring",
-    description:
-      "Meluruskan sudut roda agar setir kembali lurus, mobil tidak narik ke satu sisi, dan ban tidak habis sebelah.",
+    gejala: [
+      "Mobil narik ke kiri / kanan",
+      "Setir tidak lurus saat jalan lurus",
+      "Ban habis tidak rata / sebelah",
+    ],
+    solusi:
+      "Kalibrasi ulang sudut roda — setir kembali lurus, ban jadi awet.",
   },
   {
     icon: "wheel",
     title: "Balancing",
-    description:
-      "Menyeimbangkan putaran roda untuk menghilangkan getaran setir di kecepatan tinggi.",
+    gejala: [
+      "Setir getar di kecepatan 80 km/jam ke atas",
+      "Getaran terasa sampai lantai kabin",
+    ],
+    solusi:
+      "Penyeimbangan tiap roda dengan mesin balancing sampai getaran hilang.",
   },
   {
     icon: "spring",
     title: "Shockbreaker & Per",
-    description:
-      "Ganti atau rekondisi shockbreaker agar mobil tidak limbung, tidak mentok, dan tetap nyaman di jalan rusak.",
+    gejala: [
+      "Mobil limbung / mengayun berlebihan",
+      "Bantingan keras atau sering mentok",
+      "Rembesan oli di as shockbreaker",
+    ],
+    solusi:
+      "Ganti baru atau rekondisi — disesuaikan kebutuhan dan budget Anda.",
   },
   {
     icon: "joint",
     title: "Tie Rod, Ball Joint & Bushing",
-    description:
-      "Atasi bunyi gluduk-gluduk, setir kocak, dan kaki-kaki oblak dengan penggantian part yang presisi.",
+    gejala: [
+      "Bunyi gluduk-gluduk di jalan rusak / polisi tidur",
+      "Setir terasa kocak atau speleng",
+    ],
+    solusi:
+      "Ganti part presisi hanya di titik yang benar-benar rusak — tanpa tebak-tebakan.",
   },
   {
     icon: "brake",
     title: "Rem & Kampas",
-    description:
-      "Pemeriksaan dan penggantian kampas, cakram, serta sistem rem agar pengereman selalu pakem.",
+    gejala: [
+      "Rem berdecit atau pedal bergetar",
+      "Pengereman terasa kurang pakem",
+    ],
+    solusi:
+      "Pemeriksaan menyeluruh sistem rem; kampas / cakram diganti hanya bila perlu.",
   },
   {
     icon: "shield",
     title: "Cek Kaki-Kaki Gratis", // [KONFIRMASI OWNER]
-    description:
-      "Diagnosa menyeluruh kondisi kaki-kaki sebelum servis — transparan, tanpa biaya, tanpa paksaan servis.",
+    gejala: [
+      "Ada bunyi tapi sumbernya tidak jelas",
+      "Mau beli mobil bekas, ragu kondisi kaki-kakinya",
+    ],
+    solusi:
+      "Diagnosa lengkap tanpa biaya — hasil dijelaskan transparan sebelum ada keputusan servis.",
   },
 ];
 

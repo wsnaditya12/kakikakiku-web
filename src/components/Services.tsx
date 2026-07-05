@@ -26,8 +26,26 @@ export default function Services() {
                 <Icon name={s.icon} className="h-6 w-6" />
               </div>
               <h3 className="font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                {s.description}
+
+              {/* daftar gejala: pengunjung "merasa dikenali" masalahnya */}
+              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                Gejala
+              </p>
+              <ul className="mt-1 space-y-1">
+                {s.gejala.map((g) => (
+                  <li
+                    key={g}
+                    className="flex items-start gap-2 text-sm text-zinc-400"
+                  >
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand/70" />
+                    {g}
+                  </li>
+                ))}
+              </ul>
+
+              {/* solusi: ditonjolkan dengan blok kuning tipis */}
+              <p className="mt-4 rounded-lg bg-brand/10 p-3 text-sm leading-relaxed text-brand">
+                {s.solusi}
               </p>
             </article>
           ))}
