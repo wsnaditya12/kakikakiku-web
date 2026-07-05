@@ -9,7 +9,7 @@
 
 export const site = {
   name: "KAKIKAKIKU",
-  tagline: "Spesialis Kaki-Kaki Mobil",
+  tagline: "Teman Berkendara Anda",
   description:
     "Bengkel spesialis kaki-kaki mobil: spooring, balancing, shockbreaker, tie rod, ball joint. Diagnosa akurat, harga transparan, garansi pengerjaan.",
 
