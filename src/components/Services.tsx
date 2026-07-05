@@ -1,5 +1,6 @@
 import { services } from "@/lib/site";
 import Icon from "./Icons";
+import Reveal from "./Reveal";
 
 export default function Services() {
   return (
@@ -17,37 +18,39 @@ export default function Services() {
             Tambah layanan baru = tambah 1 objek di file data, tanpa
             menyentuh komponen ini sama sekali. */}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <article
-              key={s.title}
-              className="rounded-xl border border-line bg-surface-light p-6 transition hover:border-brand/50"
-            >
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand/15 text-brand">
-                <Icon name={s.icon} className="h-6 w-6" />
-              </div>
-              <h3 className="font-bold">{s.title}</h3>
+          {/* i = nomor urut kartu. delay={(i % 3) * 90} membuat kartu dalam
+              satu baris muncul beruntun kiri→kanan (jeda 90ms), lalu ulang di
+              baris berikutnya — efek halus, tidak lebay. */}
+          {services.map((s, i) => (
+            <Reveal key={s.title} delay={(i % 3) * 90} className="h-full">
+              <article className="h-full rounded-xl border border-line bg-surface-light p-6 transition hover:border-brand/50">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand/15 text-brand">
+                  <Icon name={s.icon} className="h-6 w-6" />
+                </div>
+                <h3 className="font-bold">{s.title}</h3>
 
-              {/* daftar gejala: pengunjung "merasa dikenali" masalahnya */}
-              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">
-                Gejala
-              </p>
-              <ul className="mt-1 space-y-1">
-                {s.gejala.map((g) => (
-                  <li
-                    key={g}
-                    className="flex items-start gap-2 text-sm text-zinc-400"
-                  >
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand/70" />
-                    {g}
-                  </li>
-                ))}
-              </ul>
+                {/* daftar gejala: pengunjung "merasa dikenali" masalahnya */}
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                  Gejala
+                </p>
+                <ul className="mt-1 space-y-1">
+                  {s.gejala.map((g) => (
+                    <li
+                      key={g}
+                      className="flex items-start gap-2 text-sm text-zinc-400"
+                    >
+                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand/70" />
+                      {g}
+                    </li>
+                  ))}
+                </ul>
 
-              {/* solusi: ditonjolkan dengan blok kuning tipis */}
-              <p className="mt-4 rounded-lg bg-brand/10 p-3 text-sm leading-relaxed text-brand">
-                {s.solusi}
-              </p>
-            </article>
+                {/* solusi: ditonjolkan dengan blok kuning tipis */}
+                <p className="mt-4 rounded-lg bg-brand/10 p-3 text-sm leading-relaxed text-brand">
+                  {s.solusi}
+                </p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -10,8 +10,7 @@ alur booking yang langsung mengarah ke WhatsApp — sesuai cara bengkel benar-be
 > **Status:** prototipe tahap 1. Beberapa data (jam buka, promo, statistik) masih dummy dan
 > ditandai `[KONFIRMASI OWNER]` di `src/lib/site.ts`, menunggu data asli dari owner.
 
-<!-- Setelah deploy, ganti baris ini dengan URL live-nya:
-**🔗 Live demo:** https://kakikakiku-web.vercel.app -->
+**🔗 Live demo:** https://kakikakiku-web.vercel.app
 
 ---
 
@@ -89,13 +88,20 @@ npm start
 
 ## 📸 Tampilan
 
-<!-- TODO: tambahkan screenshot setelah deploy.
-     Simpan gambar di folder /docs atau /screenshots, lalu:
-     ![Hero](docs/hero.png)
-     ![Layanan](docs/layanan.png)
-     ![Booking](docs/booking.png) -->
+> Taruh 2 screenshot di folder `docs/` dengan nama persis di bawah, lalu `git add . && commit && push` —
+> gambarnya otomatis muncul di sini.
 
-_Screenshot menyusul setelah deploy ke Vercel._
+| Desktop | Mobile |
+|---------|--------|
+| ![Beranda desktop](docs/desktop-home.png) | ![Beranda mobile](docs/mobile-home.png) |
+
+**Cara ambil screenshot (cepat):**
+
+- **Desktop** — buka [live demo](https://kakikakiku-web.vercel.app) → tekan `F12` →
+  `Ctrl+Shift+P` → ketik "Capture full size screenshot" → Enter. Simpan sebagai `docs/desktop-home.png`.
+- **Mobile** — buka URL yang sama di HP → screenshot biasa → kirim ke komputer, simpan sebagai
+  `docs/mobile-home.png`. (Screenshot HP asli paling pas untuk proyek *mobile-first* ini, sekaligus
+  menunjukkan hamburger menu-nya bekerja.)
 
 ## 🗺️ Rencana Selanjutnya
 

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { promos } from "@/lib/site";
+import Reveal from "./Reveal";
 
 export default function Promos() {
   return (
@@ -14,10 +15,10 @@ export default function Promos() {
         </p>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {promos.map((p) => (
+          {promos.map((p, i) => (
+            <Reveal key={p.title} delay={(i % 3) * 90} className="h-full">
             <article
-              key={p.title}
-              className="flex flex-col overflow-hidden rounded-xl border border-brand/30 bg-surface-light"
+              className="flex h-full flex-col overflow-hidden rounded-xl border border-brand/30 bg-surface-light"
             >
               {/* SLOT POSTER 4:5.
                   - relative + aspect-[4/5] = wadah dengan rasio tetap 4:5
@@ -50,6 +51,7 @@ export default function Promos() {
                 </p>
               </div>
             </article>
+            </Reveal>
           ))}
         </div>
       </div>

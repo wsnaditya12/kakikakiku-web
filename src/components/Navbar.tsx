@@ -92,10 +92,21 @@ export default function Navbar() {
       </nav>
 
       {/* PANEL MENU MOBILE.
-          Hanya dirender saat open === true, dan hanya tampil di HP (md:hidden).
-          Tiap link menutup menu setelah diklik agar tidak menghalangi konten. */}
-      {open && (
-        <div className="border-t border-line bg-surface px-4 py-4 md:hidden">
+          Kunci animasi: panel SELALU dirender (tidak pakai {open && ...}).
+          Elemen yang mendadak muncul/hilang tak bisa dianimasikan — harus ada
+          keadaan "dari" dan "ke". Jadi kita cukup mengubah kelasnya:
+          - tertutup : max-h-0 + opacity-0  (tinggi & transparansi nol)
+          - terbuka  : max-h-96 + opacity-100
+          transition-all + duration-300 = perubahan meluncur mulus 0,3 detik.
+          overflow-hidden = isi terpotong rapi saat tinggi menyusut ke 0.
+          Padding ditaruh di div DALAM agar tidak memaksa tinggi saat tertutup. */}
+      <div
+        aria-hidden={!open}
+        className={`overflow-hidden bg-surface transition-all duration-300 ease-out md:hidden ${
+          open ? "max-h-96 border-t border-line opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 py-4">
           <ul className="flex flex-col gap-1 text-sm text-zinc-200">
             {menu.map((item) => (
               <li key={item.href}>
@@ -119,7 +130,7 @@ export default function Navbar() {
             Chat WhatsApp
           </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }
