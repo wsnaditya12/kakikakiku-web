@@ -13,9 +13,9 @@ export const site = {
   description:
     "Bengkel spesialis kaki-kaki mobil: spooring, balancing, shockbreaker, tie rod, ball joint. Diagnosa akurat, harga transparan, garansi pengerjaan.",
 
-  // [KONFIRMASI OWNER] nomor placeholder.
+  // Nomor asli bengkel: 0811-916-989
   // Format internasional TANPA tanda + dan tanpa spasi: 08xx → 628xx
-  whatsapp: "6281234567890",
+  whatsapp: "62811916989",
 
   instagram: "https://www.instagram.com/kakikakiku_id/",
   tiktok: "https://www.tiktok.com/@kakikakiku_id",
