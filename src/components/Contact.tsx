@@ -15,7 +15,7 @@ export default function Contact() {
               <p className="mt-1 text-zinc-400">{site.address}</p>
               <p className="mt-1 text-zinc-500">({site.addressNote})</p>
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapsPlace)}`}
+                href={site.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-block text-brand hover:underline"
@@ -58,11 +58,11 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Peta menunjuk listing Google Maps bisnis (site.mapsPlace) */}
+        {/* Peta pakai koordinat persis bengkel — pin tidak bisa nyasar */}
         <div className="overflow-hidden rounded-2xl border border-line">
           <iframe
             title="Lokasi KAKIKAKIKU"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapsPlace)}&output=embed`}
+            src={`https://www.google.com/maps?q=${site.mapsCoords}&z=17&output=embed`}
             className="h-72 w-full md:h-full"
             loading="lazy"
           />

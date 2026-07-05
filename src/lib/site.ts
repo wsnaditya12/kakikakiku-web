@@ -24,10 +24,12 @@ export const site = {
   address:
     "Pasar Mobil Kemayoran Blok S, Jl. Pintu I No. 42–43, RW 10, Pademangan Timur, Kec. Pademangan, Jakarta 10620",
   addressNote: "Masuk dari Pintu I Pasar Mobil Kemayoran",
-  /* Nama bisnis persis seperti di Google Maps — dipakai untuk embed peta
-     dan tombol "Buka di Google Maps" supaya pin menunjuk listing bengkel,
-     bukan sekadar perkiraan alamat. */
-  mapsPlace: "KAKIKAKIKU - PT KOLABORASI KREASI INTERNUSA, Pasar Mobil Kemayoran, Jakarta",
+  /* Link listing Google Maps bengkel (mengandung ID unik tempat, jadi
+     tidak mungkin nyasar). Pencarian by nama terbukti bisa salah alamat. */
+  mapsUrl:
+    "https://www.google.com/maps/place/KAKIKAKIKU+-+PT+KOLABORASI+KREASI+INTERNUSA/@-6.1505958,106.8445884,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f5e55a841a99:0x6da57638fa95cb15!8m2!3d-6.1505958!4d106.8445884!16s%2Fg%2F11y48ycsh6",
+  /* Koordinat persis untuk embed peta di halaman */
+  mapsCoords: "-6.1505958,106.8445884",
 
   // [KONFIRMASI OWNER] jam buka asumsi
   hours: [
