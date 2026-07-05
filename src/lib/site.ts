@@ -20,8 +20,14 @@ export const site = {
   instagram: "https://www.instagram.com/kakikakiku_id/",
   tiktok: "https://www.tiktok.com/@kakikakiku_id",
 
-  // [KONFIRMASI OWNER] alamat dummy
-  address: "Jl. Raya Otomotif No. 88, Kota Contoh",
+  // Alamat asli (dari listing Google Maps bisnis KAKIKAKIKU)
+  address:
+    "Pasar Mobil Kemayoran Blok S, Jl. Pintu I No. 42–43, RW 10, Pademangan Timur, Kec. Pademangan, Jakarta 10620",
+  addressNote: "Masuk dari Pintu I Pasar Mobil Kemayoran",
+  /* Nama bisnis persis seperti di Google Maps — dipakai untuk embed peta
+     dan tombol "Buka di Google Maps" supaya pin menunjuk listing bengkel,
+     bukan sekadar perkiraan alamat. */
+  mapsPlace: "KAKIKAKIKU - PT KOLABORASI KREASI INTERNUSA, Pasar Mobil Kemayoran, Jakarta",
 
   // [KONFIRMASI OWNER] jam buka asumsi
   hours: [

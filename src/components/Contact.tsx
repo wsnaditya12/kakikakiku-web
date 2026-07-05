@@ -13,6 +13,15 @@ export default function Contact() {
             <div>
               <p className="font-bold text-zinc-200">Alamat</p>
               <p className="mt-1 text-zinc-400">{site.address}</p>
+              <p className="mt-1 text-zinc-500">({site.addressNote})</p>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.mapsPlace)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block text-brand hover:underline"
+              >
+                Buka di Google Maps →
+              </a>
             </div>
 
             <div>
@@ -49,12 +58,11 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* [KONFIRMASI OWNER] peta mengikuti site.address — ganti dengan
-            alamat asli (atau link share Google Maps bengkel) sebelum rilis */}
+        {/* Peta menunjuk listing Google Maps bisnis (site.mapsPlace) */}
         <div className="overflow-hidden rounded-2xl border border-line">
           <iframe
             title="Lokasi KAKIKAKIKU"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(site.address)}&output=embed`}
+            src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapsPlace)}&output=embed`}
             className="h-72 w-full md:h-full"
             loading="lazy"
           />
