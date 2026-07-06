@@ -1,5 +1,5 @@
 /* =====================================================
-   DATA PUSAT SITUS: satu-satunya file yang perlu diedit
+   DATA PUSAT SITUS — satu-satunya file yang perlu diedit
    untuk mengganti teks, nomor WA, layanan, atau promo.
    Semua komponen hanya MEMBACA dari sini.
 
@@ -12,7 +12,7 @@ export const site = {
   tagline: "Teman Berkendara Anda",
   // Kalimat kunci untuk Google: mengandung "apa" + "di mana".
   // Dipakai di judul <title> supaya cocok dengan yang orang ketik.
-  seoTitle: "Bengkel Kaki-Kaki Mobil di Jakarta | Spooring & Balancing",
+  seoTitle: "Bengkel Kaki-Kaki Mobil di Jakarta - Spooring & Balancing",
   description:
     "Bengkel spesialis kaki-kaki mobil di Kemayoran, Jakarta: spooring, balancing, shockbreaker, tie rod, ball joint. Diagnosa akurat, harga transparan, garansi pengerjaan.",
   // [KONFIRMASI OWNER] domain final. Sementara pakai placeholder.
@@ -46,7 +46,7 @@ export const site = {
 
 /* `type` di TypeScript = kontrak bentuk data.
    Kalau ada layanan yang lupa diberi `title`, error langsung
-   muncul saat menulis kode, bukan saat web sudah tayang. */
+   muncul saat menulis kode — bukan saat web sudah tayang. */
 /* Pola "Gejala → Solusi" (diadopsi dari pembanding terbaik):
    pengunjung mengenali MASALAHNYA dulu, baru ditawari solusinya.
    Lebih menjual daripada sekadar deskripsi layanan. */
@@ -67,7 +67,7 @@ export const services: Service[] = [
       "Ban habis tidak rata / sebelah",
     ],
     solusi:
-      "Kalibrasi ulang sudut roda supaya setir kembali lurus dan ban lebih awet.",
+      "Kalibrasi ulang sudut roda - setir kembali lurus, ban jadi awet.",
   },
   {
     icon: "wheel",
@@ -88,7 +88,7 @@ export const services: Service[] = [
       "Rembesan oli di as shockbreaker",
     ],
     solusi:
-      "Ganti baru atau rekondisi, disesuaikan dengan kebutuhan dan budget Anda.",
+      "Ganti baru atau rekondisi - disesuaikan kebutuhan dan budget Anda.",
   },
   {
     icon: "joint",
@@ -98,7 +98,79 @@ export const services: Service[] = [
       "Setir terasa kocak atau speleng",
     ],
     solusi:
-      "Ganti part presisi hanya di titik yang benar-benar rusak, tanpa tebak-tebakan.",
+      "Ganti part presisi hanya di titik yang benar-benar rusak - tanpa tebak-tebakan.",
   },
   {
-    ico
+    icon: "brake",
+    title: "Rem & Kampas",
+    gejala: [
+      "Rem berdecit atau pedal bergetar",
+      "Pengereman terasa kurang pakem",
+    ],
+    solusi:
+      "Pemeriksaan menyeluruh sistem rem; kampas / cakram diganti hanya bila perlu.",
+  },
+  {
+    icon: "shield",
+    title: "Cek Kaki-Kaki Gratis", // [KONFIRMASI OWNER]
+    gejala: [
+      "Ada bunyi tapi sumbernya tidak jelas",
+      "Mau beli mobil bekas, ragu kondisi kaki-kakinya",
+    ],
+    solusi:
+      "Diagnosa lengkap tanpa biaya — hasil dijelaskan transparan sebelum ada keputusan servis.",
+  },
+];
+
+export type Promo = {
+  badge: string;
+  title: string;
+  description: string;
+  until: string;
+  /* Gambar poster promo (rasio 4:5). File ada di folder public/promos/.
+     Poster dibuat tim media tiap bulan; teks di bawah tetap ditulis manual
+     supaya terbaca Google (SEO) & pembaca layar. [KONFIRMASI OWNER] rasio 4:5 */
+  image: string;
+};
+
+// [KONFIRMASI OWNER] — semua promo di bawah ini dummy
+export const promos: Promo[] = [
+  {
+    badge: "GRATIS",
+    title: "Cek Kaki-Kaki Gratis",
+    description:
+      "Setiap kunjungan servis apa pun, dapatkan diagnosa kaki-kaki lengkap tanpa biaya.",
+    until: "Tanpa batas waktu",
+    image: "/promos/promo-1.jpg",
+  },
+  {
+    badge: "-20%",
+    title: "Paket Spooring + Balancing",
+    description:
+      "Hemat 20% untuk pengerjaan spooring dan balancing sekaligus dalam satu kunjungan.",
+    until: "s.d. 31 Juli 2026",
+    image: "/promos/promo-2.jpg",
+  },
+  {
+    badge: "BONUS",
+    title: "Ganti Sepasang Shockbreaker",
+    description:
+      "Gratis balancing 2 roda untuk setiap penggantian sepasang shockbreaker.",
+    until: "s.d. 31 Juli 2026",
+    image: "/promos/promo-3.jpg",
+  },
+];
+
+// [KONFIRMASI OWNER] — angka dummy untuk hero
+export const stats = [
+  { value: "10+", label: "Tahun Pengalaman" },
+  { value: "5.000+", label: "Mobil Ditangani" },
+  { value: "100%", label: "Garansi Pengerjaan" },
+];
+
+/* Membuat URL WhatsApp dengan pesan terisi otomatis.
+   encodeURIComponent mengubah spasi/baris baru menjadi
+   format yang aman dibawa lewat URL. */
+export function waLink(message: string): string {
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+}

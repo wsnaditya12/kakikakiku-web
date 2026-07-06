@@ -32,7 +32,7 @@ export default function Booking() {
 
   function update(field: keyof typeof formKosong, value: string) {
     /* {...form} = salin semua isi form lama, lalu timpa 1 field.
-       State di React tidak boleh diubah langsung, selalu buat salinan. */
+       State di React tidak boleh diubah langsung — selalu buat salinan. */
     setForm({ ...form, [field]: value });
   }
 
@@ -48,7 +48,7 @@ export default function Booking() {
       `Rencana datang: ${form.waktu}`,
     ].join("\n");
 
-    /* buka WhatsApp dengan pesan sudah terisi, pelanggan tinggal kirim */
+    /* buka WhatsApp dengan pesan sudah terisi — pelanggan tinggal kirim */
     window.open(waLink(pesan), "_blank");
   }
 
@@ -62,7 +62,7 @@ export default function Booking() {
           <p className="mt-3 max-w-md text-zinc-400">
             Isi form ini, lalu Anda langsung tersambung ke WhatsApp kami dengan
             pesan yang sudah terisi otomatis. Keluhan kaki-kaki perlu
-            didiskusikan dulu, jadi konsultasinya gratis dan jadwalnya fleksibel.
+            didiskusikan dulu — jadi konsultasinya gratis, jadwalnya fleksibel.
           </p>
           <ol className="mt-6 space-y-3 text-sm text-zinc-300">
             {[
