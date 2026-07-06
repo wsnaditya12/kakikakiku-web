@@ -58,7 +58,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Peta pakai koordinat persis bengkel — pin tidak bisa nyasar */}
+        {/* Peta pakai koordinat persis bengkel, pin tidak bisa nyasar */}
         <div className="overflow-hidden rounded-2xl border border-line">
           <iframe
             title="Lokasi KAKIKAKIKU"

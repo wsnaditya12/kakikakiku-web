@@ -4,7 +4,7 @@ import "./globals.css";
 import { site } from "@/lib/site";
 
 /* next/font: Next.js mengunduh font saat BUILD lalu menyajikannya dari
-   server sendiri — loading cepat dan tidak bergantung Google saat runtime. */
+   server sendiri, loading cepat dan tidak bergantung Google saat runtime. */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
   /* title.template: pola judul otomatis tiap halaman.
      Halaman utama pakai `default`; halaman lain nanti cukup isi
-     judul singkat, sisanya "— KAKIKAKIKU" ditempel otomatis. */
+     judul singkat, sisanya "| KAKIKAKIKU" ditempel otomatis. */
   title: {
     default: `${site.seoTitle} | ${site.name}`,
     template: `%s | ${site.name}`,

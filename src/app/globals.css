@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* =====================================================
-   TEMA WARNA BRAND — KAKIKAKIKU (kuning + abu-abu gelap)
+   TEMA WARNA BRAND: KAKIKAKIKU (kuning + abu-abu gelap)
 
    Tailwind v4: warna custom didefinisikan lewat @theme.
    Setelah didefinisikan di sini, otomatis tersedia sebagai
@@ -11,7 +11,7 @@
    Ganti nilai hex di sini → seluruh situs ikut berubah.
    ===================================================== */
 @theme inline {
-  --color-brand: #e8b830;         /* kuning emas — disamakan dengan warna logo */
+  --color-brand: #e8b830;         /* kuning emas, disamakan dengan warna logo */
   --color-brand-dark: #c79a1d;    /* kuning tua (efek hover)        */
   --color-surface: #0f1115;       /* abu sangat gelap (background)  */
   --color-surface-light: #1a1d24; /* abu gelap (kartu / section)    */

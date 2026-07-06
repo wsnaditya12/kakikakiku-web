@@ -1,5 +1,5 @@
 /* =====================================================
-   DATA PUSAT SITUS — satu-satunya file yang perlu diedit
+   DATA PUSAT SITUS: satu-satunya file yang perlu diedit
    untuk mengganti teks, nomor WA, layanan, atau promo.
    Semua komponen hanya MEMBACA dari sini.
 
@@ -12,7 +12,7 @@ export const site = {
   tagline: "Teman Berkendara Anda",
   // Kalimat kunci untuk Google: mengandung "apa" + "di mana".
   // Dipakai di judul <title> supaya cocok dengan yang orang ketik.
-  seoTitle: "Bengkel Kaki-Kaki Mobil di Jakarta - Spooring & Balancing",
+  seoTitle: "Bengkel Kaki-Kaki Mobil di Jakarta | Spooring & Balancing",
   description:
     "Bengkel spesialis kaki-kaki mobil di Kemayoran, Jakarta: spooring, balancing, shockbreaker, tie rod, ball joint. Diagnosa akurat, harga transparan, garansi pengerjaan.",
   // [KONFIRMASI OWNER] domain final. Sementara pakai placeholder.
@@ -46,7 +46,7 @@ export const site = {
 
 /* `type` di TypeScript = kontrak bentuk data.
    Kalau ada layanan yang lupa diberi `title`, error langsung
-   muncul saat menulis kode — bukan saat web sudah tayang. */
+   muncul saat menulis kode, bukan saat web sudah tayang. */
 /* Pola "Gejala → Solusi" (diadopsi dari pembanding terbaik):
    pengunjung mengenali MASALAHNYA dulu, baru ditawari solusinya.
    Lebih menjual daripada sekadar deskripsi layanan. */
@@ -67,7 +67,7 @@ export const services: Service[] = [
       "Ban habis tidak rata / sebelah",
     ],
     solusi:
-      "Kalibrasi ulang sudut roda - setir kembali lurus, ban jadi awet.",
+      "Kalibrasi ulang sudut roda supaya setir kembali lurus dan ban lebih awet.",
   },
   {
     icon: "wheel",
@@ -88,7 +88,7 @@ export const services: Service[] = [
       "Rembesan oli di as shockbreaker",
     ],
     solusi:
-      "Ganti baru atau rekondisi - disesuaikan kebutuhan dan budget Anda.",
+      "Ganti baru atau rekondisi, disesuaikan dengan kebutuhan dan budget Anda.",
   },
   {
     icon: "joint",
@@ -98,7 +98,7 @@ export const services: Service[] = [
       "Setir terasa kocak atau speleng",
     ],
     solusi:
-      "Ganti part presisi hanya di titik yang benar-benar rusak - tanpa tebak-tebakan.",
+      "Ganti part presisi hanya di titik yang benar-benar rusak, tanpa tebak-tebakan.",
   },
   {
     icon: "brake",
@@ -118,7 +118,7 @@ export const services: Service[] = [
       "Mau beli mobil bekas, ragu kondisi kaki-kakinya",
     ],
     solusi:
-      "Diagnosa lengkap tanpa biaya — hasil dijelaskan transparan sebelum ada keputusan servis.",
+      "Diagnosa lengkap tanpa biaya. Hasilnya dijelaskan transparan sebelum ada keputusan servis.",
   },
 ];
 

@@ -1,6 +1,6 @@
 import { site, waLink } from "@/lib/site";
 
-/* Tombol WA melayang di pojok kanan bawah — pola umum situs bisnis
+/* Tombol WA melayang di pojok kanan bawah, pola umum situs bisnis
    di Indonesia; selalu terlihat walau user sudah scroll jauh. */
 export default function FloatingWhatsApp() {
   return (

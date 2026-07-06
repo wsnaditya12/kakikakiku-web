@@ -20,7 +20,7 @@ export default function Services() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {/* i = nomor urut kartu. delay={(i % 3) * 90} membuat kartu dalam
               satu baris muncul beruntun kiri→kanan (jeda 90ms), lalu ulang di
-              baris berikutnya — efek halus, tidak lebay. */}
+              baris berikutnya. Efek halus, tidak lebay. */}
           {services.map((s, i) => (
             <Reveal key={s.title} delay={(i % 3) * 90} className="h-full">
               <article className="h-full rounded-xl border border-line bg-surface-light p-6 transition hover:border-brand/50">

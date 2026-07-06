@@ -57,7 +57,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* kartu gejala — pengisi visual pengganti foto untuk prototipe.
+        {/* kartu gejala, pengisi visual pengganti foto untuk prototipe.
             Nanti bisa diganti foto bengkel/mobil asli dari owner. */}
         <div className="self-center rounded-2xl border border-line bg-surface-light p-6">
           <h2 className="text-lg font-bold">Sering merasakan ini?</h2>
@@ -70,7 +70,7 @@ export default function Hero() {
             ))}
           </ul>
           <p className="mt-5 rounded-lg bg-brand/10 p-3 text-sm text-brand">
-            Jangan tunggu parah - kerusakan kaki-kaki bisa menjalar ke part lain.
+            Jangan tunggu parah, kerusakan kaki-kaki bisa menjalar ke part lain.
           </p>
         </div>
       </div>

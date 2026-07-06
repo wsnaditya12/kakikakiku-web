@@ -10,7 +10,7 @@ export default function Promos() {
           Promo <span className="text-brand">Bulan Ini</span>
         </h2>
         <p className="mt-2 text-zinc-400">
-          {/* [KONFIRMASI OWNER] semua promo masih contoh — edit di src/lib/site.ts */}
+          {/* [KONFIRMASI OWNER] semua promo masih contoh, edit di src/lib/site.ts */}
           Penawaran terbatas, langsung amankan slotnya.
         </p>
 
