@@ -10,8 +10,14 @@
 export const site = {
   name: "KAKIKAKIKU",
   tagline: "Teman Berkendara Anda",
+  // Kalimat kunci untuk Google: mengandung "apa" + "di mana".
+  // Dipakai di judul <title> supaya cocok dengan yang orang ketik.
+  seoTitle: "Bengkel Kaki-Kaki Mobil di Jakarta — Spooring & Balancing",
   description:
-    "Bengkel spesialis kaki-kaki mobil: spooring, balancing, shockbreaker, tie rod, ball joint. Diagnosa akurat, harga transparan, garansi pengerjaan.",
+    "Bengkel spesialis kaki-kaki mobil di Kemayoran, Jakarta: spooring, balancing, shockbreaker, tie rod, ball joint. Diagnosa akurat, harga transparan, garansi pengerjaan.",
+  // [KONFIRMASI OWNER] domain final. Sementara pakai placeholder.
+  // Dipakai untuk link preview WhatsApp/Instagram & data SEO.
+  url: "https://kakikakiku.com",
 
   // Nomor asli bengkel: 0811-916-989
   // Format internasional TANPA tanda + dan tanpa spasi: 08xx → 628xx
