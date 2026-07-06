@@ -70,7 +70,7 @@ export default function Hero() {
             ))}
           </ul>
           <p className="mt-5 rounded-lg bg-brand/10 p-3 text-sm text-brand">
-            Jangan tunggu parah — kerusakan kaki-kaki bisa menjalar ke part lain.
+            Jangan tunggu parah - kerusakan kaki-kaki bisa menjalar ke part lain.
           </p>
         </div>
       </div>
