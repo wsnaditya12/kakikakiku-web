@@ -32,7 +32,7 @@ export default function Booking() {
 
   function update(field: keyof typeof formKosong, value: string) {
     /* {...form} = salin semua isi form lama, lalu timpa 1 field.
-       State di React tidak boleh diubah langsung, selalu buat salinan. */
+       State di React tidak boleh diubah langsung — selalu buat salinan. */
     setForm({ ...form, [field]: value });
   }
 
@@ -48,7 +48,7 @@ export default function Booking() {
       `Rencana datang: ${form.waktu}`,
     ].join("\n");
 
-    /* buka WhatsApp dengan pesan sudah terisi, pelanggan tinggal kirim */
+    /* buka WhatsApp dengan pesan sudah terisi — pelanggan tinggal kirim */
     window.open(waLink(pesan), "_blank");
   }
 
