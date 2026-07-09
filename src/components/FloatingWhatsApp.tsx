@@ -9,7 +9,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat WhatsApp"
-      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 shadow-lg transition hover:scale-110"
+      className="fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-green-500 shadow-lg transition hover:scale-110 md:bottom-5 md:right-5 md:h-14 md:w-14"
     >
       <svg
         viewBox="0 0 24 24"
@@ -18,7 +18,7 @@ export default function FloatingWhatsApp() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-7 w-7"
+        className="h-6 w-6 md:h-7 md:w-7"
         aria-hidden="true"
       >
         <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />

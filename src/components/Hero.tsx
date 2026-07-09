@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
 
           {/* [KONFIRMASI OWNER] angka diambil dari src/lib/site.ts */}
-          <div className="mt-10 grid grid-cols-3 gap-4">
+          <div className="mt-10 grid grid-cols-3 gap-4 pr-16 md:pr-0">
             {stats.map((s) => (
               <div key={s.label}>
                 <p className="text-2xl font-extrabold text-brand">{s.value}</p>
